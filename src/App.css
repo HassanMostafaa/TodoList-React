@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+
+}
+
+.body {
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #2bc0e4, #eaecc6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.card {
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(65, 65, 65, 0.1);
+  border-radius: 8px;
+  max-width: 600px;
+  min-width: 350px;
+  margin: 20px 0;
+  
+  background-color: rgba(255, 255, 255, 0.642);
+}
+
+
+.card .inputs {
+  margin: 20px auto;
+
+}
+
+.item {
+  margin: 10px 0;
+}
+
+.btnAndLi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .inputs input {
+  padding: 14px 12px;
+  display: block;
+  border-bottom: 1px solid rgb(194, 194, 194);
+  background: #f4f4f4;
+  margin: 10px auto;
+  background-color: rgba(255, 255, 255, 0.363);
+  min-width: 100%;
+  transition: .5s;
+
+}
+
+.card .inputs input:hover {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.150);
+
+}
+
+.card .inputs input:focus {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.150);
+  transition: .5s;
+
+}
+
+.card .inputs button {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  padding: 10px 40px;
+  background-color: rgba(255, 255, 255, 0.363);
+  transition: .5s;
+
+}
+
+.card .inputs button:hover {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.150);
+  transition: .5s;
+
+}
+
+.card .list ul {
+  color: #333;
+  font-weight: 600;
+
+
+
+}
+
+.card .list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c7c7c718;
+  padding: 10px;
+  width: 100%;
+}
+
+.card .list ul li:hover {
+  background-color: #d8d8d863;
+  cursor: pointer;
+  transition: .5s;
+
+}
+
+
+.card .list ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(177, 177, 177, 0.438);
+}
+
+.time {
+  color: gray;
+  font-size: 12px;
+  font-weight: 400;
+
+}
+
+.card .list ul button {
+
+  background-color: #c7c7c718;
+  padding: 13px 15px;
+  border-bottom: 1px solid rgba(177, 177, 177, 0.438);
+  transition: .5s;
+  height: 100%;
+
+  color: #630808;
+}
+
+.card .list ul button:hover {
+
+  background-color: rgba(212, 44, 44, 0.904);
+  color: #f4f4f4;
+  transition: .5s;
+}
+
+.done {
+position: relative;
+  color: green;
+}
+.done::after{
+  width: 85%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  bottom: 47%;
+  left:10px;
+  border-bottom: 1px solid green;
+  animation: slider 1s forwards;
+}
+@keyframes slider {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 80%;
+  }
+}
+
+.done .fa-check{
+  text-decoration: none;
+  color: green;
+  font-size: 17px;
+  text-align: right;
+  
+}
+
+@media screen and (max-width:700px) {
+  .card {
+    min-width: 270px;
+  }
+  .done::after{
+    width: 85%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    bottom: 47%;
+    left:10px;
+    border-bottom: 1px solid green;
+    animation: slider 1s forwards;
+  }
+  .card .list ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c7c7c718;
+    padding: 10px 3px;
+    width: 100%;
+  }
+  
+}
